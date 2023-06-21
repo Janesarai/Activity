@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#AEF4C6"
     tools:context=".MainActivity">
 
     <ImageView
@@ -15,56 +16,55 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.122"
-        tools:srcCompat="@drawable/baseline_person_pin_24" />
+        app:layout_constraintVertical_bias="0.076"
+        app:srcCompat="@drawable/baseline_person_outline_24" />
 
     <EditText
         android:id="@+id/nombre"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        style="@style/estiloNuevo"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="16dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Name"
+        android:text="name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
         android:id="@+id/apellido"
+        style="@style/estiloNuevo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="text"
         android:text="Last Name"
-        app:layout_constraintEnd_toEndOf="@id/nombre"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="@+id/nombre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nombre" />
 
     <EditText
         android:id="@+id/email"
+        style="@style/estiloNuevo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="@+id/apellido"
-        app:layout_constraintStart_toStartOf="@+id/apellido"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/apellido" />
 
     <EditText
         android:id="@+id/clave"
+        style="@style/estiloNuevo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="@+id/email"
-        app:layout_constraintStart_toStartOf="@+id/email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email" />
 
     <Button
@@ -73,7 +73,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Create Acount"
-        app:layout_constraintTop_toBottomOf="@+id/clave"
-        tools:layout_editor_absoluteX="160dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clave" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
