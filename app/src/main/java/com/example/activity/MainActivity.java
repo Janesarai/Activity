@@ -8,34 +8,28 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.activity.databinding.ActivityMainBinding;
 
+public class MainActivity extends AppCompatActivity {
+private ActivityMainBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        binding= ActivityMainBinding.inflate(getLayoutInflater());
 
-        EditText nombre;
-        EditText apellido;
-        EditText email;
-        EditText clave;
-
-
-        nombre= findViewById(R.id.nombre);
-        apellido= findViewById(R.id.apellido);
-        email= findViewById(R.id.email);
-        clave= findViewById(R.id.clave);
+        setContentView(binding.getRoot());
 
         Button btnCreate= findViewById(R.id.buttoncrear);
 
-        btnCreate.setOnClickListener(new View.OnClickListener() {
+        binding.buttoncrear.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
 
-                String name= nombre.getText().toString();
-                String apellid= apellido.getText().toString();
-                String emai = email.getText().toString();
-                String clav= clave.getText().toString();
+                String name= binding.nombre.getText().toString();
+                String apellid= binding.apellido.getText().toString();
+                String emai = binding.email.getText().toString();
+                String clav= binding.clave.getText().toString();
 
                 if (name.isEmpty() || apellid.isEmpty() || emai.isEmpty() || clav.isEmpty() || !emai.contains("@")){
                     Toast.makeText(getBaseContext(), "Faltan campos por completar", Toast.LENGTH_SHORT).show();
